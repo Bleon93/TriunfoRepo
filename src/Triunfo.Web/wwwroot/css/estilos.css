@@ -1,0 +1,359 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+}
+
+body{
+	background: white;
+}
+
+
+
+.ingreso{
+	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+.navegación{
+	color: white;
+}
+
+.txtCentrado{
+	text-align: center;
+}
+
+.txtCentrado img{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+nav{
+	text-align: right;
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	display: inline-block;
+}
+nav ul li a{
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+
+}
+nav ul li a:hover{
+	background: grey;
+	color: white;
+}
+
+section{
+	text-align: center;
+}
+section ul{
+	list-style: none;
+}
+section ul li{
+	display: block;
+}
+section ul li a{
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	margin: 20px 0px;
+}
+section ul li a:hover{
+	background: grey;
+	color: white;
+}
+
+section h1{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+header{
+	background: rgba(10,23,71,0.8);
+	color: white;
+}
+
+footer{
+	background: green;
+	color: white;
+	padding: 15px;
+	background: rgba(10,23,71,0.8);;
+}
+
+.logo img{
+	width:120px;
+	height:auto;
+	padding: 2px;
+}
+.titulo{
+	padding: 25px;
+}
+
+.fondo {
+	background-image:  url('../img/family-2923690_1920.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top;
+}
+
+.fondo1{
+	background-image:  url('../img/Fondo 2.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top;
+}
+.fondo1a{
+	background-image:  url('../img/Fondo 3.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top; 
+}
+.fondo1b{
+	background-image:  url('../img/Fondo 4.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top;
+}
+
+.fondo2{
+	background-image:  url('../img/breakfast-1835478_1920.jpg');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top;
+}
+
+.img_pag_error{
+	background-image:  url('../img/pagina_error_404.png');
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position:center;
+	background-position:top;
+}
+
+.cuadro{
+	width: 700px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	margin: auto;
+	padding: 0px;
+	color: white;
+}
+
+.cuadro1{
+	width: 500px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	border: 2px solid white;
+	margin: auto;
+	color: white;
+}
+
+.cuadro2{
+	width: 500px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	margin: auto;
+	border: 2px solid white;
+	color: white;
+}
+.cuadro3{
+	width: 500px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	margin: auto;
+	border: 2px solid white;
+	color: white;
+}
+.cuadro4{
+	width: 500px;
+	text-align: center;
+	background: rgba(0,0,0,0.8);
+	margin: auto;
+	border: 2px solid white;
+	color: white;
+}
+
+.div_pro{
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: left;
+	padding: 20px;
+}
+
+.div_quien{
+	width: 33.33%;
+	height: 100%;
+	float: left;
+	text-align: left;
+	padding: 20px;
+}
+
+.div_quien1{
+	width: 33.34%;
+	height: 100%;
+	float: left;
+	text-align: left;
+	padding: 20px;
+}
+
+.div_contac{
+	width: 50%;
+	height: 100%;
+	border-right: 2px solid white;
+	float: left;
+	text-align: center;
+}
+
+
+  /* Ingresar */
+
+.contenedor{
+	width: 100%;
+	max-width: 2000px;
+}
+
+.contacta{
+    
+    width: 85%;
+    height: 20px;
+    margin: 10px 0px 0px 8%;
+}
+.contacta input{
+    width: 90%;
+    height: 100%;
+    float: right;
+}
+
+.apellidos{
+    
+    width: 19%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+
+.espacioCorr{
+    width: 81%;
+    height: 100%;
+    float: left;
+}
+
+.Enviar{
+    width: 100px;
+    height: 110px;
+    margin: auto;
+    
+}
+
+.enviar p{
+    margin: 11px 0px 0px 0px;
+}
+
+/* Registro */
+.nombres{
+    
+    width: 15%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+.apellidos{
+    
+    width: 19%;
+    height: 100%;
+    float: left;
+    text-align: center;
+
+}
+.espacio{
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.espacioCorr{
+    width: 81%;
+    height: 100%;
+    float: left;
+}
+
+.Mensaje{
+    width: 81%;
+    height: 180px;
+    float: left;
+}
+
+.Mensaje imput{
+    width: 81%;
+    height: 300px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.borde{
+    border: 1px solid black;
+}
+
+.bordeB{
+    border: 0px solid white;
+}
+
+.contacta select {
+    width: 90%;
+	height: 99%;
+	float: right;
+}
+
+.enviarOC{
+    width: 80px;
+	height: 35px;
+	text-align: center; ;
+	margin: 0% 0% 0% 43%;
+	background: white;
+	font-size:20px;	
+}
+
+
+.contactaI{
+    width: 85%;
+    height: 15px;
+    margin: 0px 0px 0px 8%;
+}
+
+.carousel-item{
+	height: 250px;
+}
+
+img{
+	padding: 10px;
+}
+
+form p{
+	padding: 5px;
+	margin-left: 50px;
+}
+input{
+	float: right;
+	margin-right: 50px;
+}	
+select{
+	width: 173px;
+	float: right;
+	margin-right: 50px;
+}

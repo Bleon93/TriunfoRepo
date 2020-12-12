@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Triunfo.Core.Domain.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="text-align:center">Manejo de Usuarios</h1>
+
+<p style="text-align:right">
+    <a class="btn btn-success" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RolUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaveUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPersonaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RolUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaveUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoUsuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPersonaNavigation.ApellidoPersona)
+            </td>
+            <td>
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IdUsuario">Details</a> |
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.IdUsuario">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

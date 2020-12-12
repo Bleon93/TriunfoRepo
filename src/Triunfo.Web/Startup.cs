@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Triunfo.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Triunfo.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace Triunfo.Web
 {
@@ -28,6 +30,17 @@ namespace Triunfo.Web
             services.AddControllersWithViews();
             services.AddDbContext<TriunfoDbContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("TriunfoConnection")));
+
+            services.AddDbContext<AppIdentityDbContext>(options =>
+                 options.UseMySQL(
+                     Configuration.GetConnectionString("IdentityContextConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+               .AddEntityFrameworkStores<AppIdentityDbContext>();
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddMvc();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +61,7 @@ namespace Triunfo.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -55,6 +69,8 @@ namespace Triunfo.Web
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapRazorPages();
             });
         }
     }
