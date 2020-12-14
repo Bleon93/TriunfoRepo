@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Triunfo.Core.Domain
 {
@@ -13,6 +14,8 @@ namespace Triunfo.Core.Domain
 
         public int IdProducto { get; set; }
         public string NombreProducto { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:c}")]
         public int? PrecioSalidaPro { get; set; }
         public int? CategoriaProducto { get; set; }
         public int? IvaProducto { get; set; }

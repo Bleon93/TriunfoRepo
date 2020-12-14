@@ -48,7 +48,7 @@ namespace Triunfo.Web.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
-            ViewData["CategoriaProducto"] = new SelectList(_context.DetalleParametro, "IdDetParametro", "IdDetParametro");
+            ViewData["CategoriaProducto"] = new SelectList(_context.DetalleParametro, "IdDetParametro", "DescripcionDetParametro");
             return View();
         }
 

@@ -12,6 +12,8 @@ using Triunfo.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Triunfo.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 
 namespace Triunfo.Web
 {
@@ -46,6 +48,21 @@ namespace Triunfo.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var defaultDateCulture = "es-CO";
+            var ci = new CultureInfo(defaultDateCulture);
+            // Configure the Localization middleware
+            IApplicationBuilder applicationBuilder = app.UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(ci),
+                SupportedCultures = new List<CultureInfo>
+        {
+            ci,
+        },
+                SupportedUICultures = new List<CultureInfo>
+                {
+                }
+            }
+            );
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
