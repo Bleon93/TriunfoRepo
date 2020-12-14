@@ -11,29 +11,29 @@
     <h4>Usuario</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPersona)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdPersonaNavigation.ApellidoPersona)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.RolUsuario)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.RolUsuario)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ClaveUsuario)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ClaveUsuario)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.EstadoUsuario)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.EstadoUsuario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdPersonaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdPersonaNavigation.ApellidoPersona)
         </dd>
     </dl>
 </div>

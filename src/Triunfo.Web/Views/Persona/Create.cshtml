@@ -14,6 +14,16 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label asp-for="TipoDocPersona" class="control-label"></label>
+                <select asp-for="TipoDocPersona" class="form-control" asp-items="ViewBag.TipoDocPersona"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumDocPersona" class="control-label"></label>
+                <input asp-for="NumDocPersona" class="form-control" />
+                <span asp-validation-for="NumDocPersona" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
                 <label asp-for="NombrePersona" class="control-label"></label>
                 <input asp-for="NombrePersona" class="form-control" />
                 <span asp-validation-for="NombrePersona" class="text-danger"></span>
@@ -24,29 +34,28 @@
                 <span asp-validation-for="ApellidoPersona" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="TelefonoPersona" class="control-label"></label>
+                <input asp-for="TelefonoPersona" class="form-control" />
+                <span asp-validation-for="TelefonoPersona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="CorreoPersona" class="control-label"></label>
                 <input asp-for="CorreoPersona" class="form-control" />
                 <span asp-validation-for="CorreoPersona" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TipoDocPersona" class="control-label"></label>
-                <select asp-for="TipoDocPersona" class ="form-control" asp-items="ViewBag.TipoDocPersona"></select>
+                <label asp-for="RazonSocial" class="control-label"></label>
+                <input asp-for="RazonSocial" class="form-control" />
+                <span asp-validation-for="RazonSocial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NumDocPersona" class="control-label"></label>
-                <input asp-for="NumDocPersona" class="form-control" />
-                <span asp-validation-for="NumDocPersona" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a class="btn btn-success" asp-action="Index">Back to List</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

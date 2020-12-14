@@ -9,10 +9,14 @@
 
 <p style="text-align:right">
     <a class="btn btn-success" asp-action="Create">Create New</a>
+    <a class="btn btn-secondary" style="float:left" href="../Home/MenuListar"> << Back</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDocumento)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.NumDocumento)
             </th>
@@ -23,26 +27,27 @@
                 @Html.DisplayNameFor(model => model.Apellidos)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.EMail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telefono)
+                @Html.DisplayNameFor(model => model.TipoSolicitud)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Mensaje)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoDocumento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoSolicitudNavigation)
-            </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDocumentoNavigation.ValorStringDetParametro)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NumDocumento)
             </td>
@@ -53,20 +58,18 @@
                 @Html.DisplayFor(modelItem => item.Apellidos)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EMail)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Telefono)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Mensaje)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoDocumentoNavigation.ValorStringDetParametro)
+                @Html.DisplayFor(modelItem => item.EMail)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TipoSolicitudNavigation.IdDetParametro)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mensaje)
+            </td>
+
             <td>
                 <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IdPqr">Details</a> |
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IdPqr">Edit</a> |

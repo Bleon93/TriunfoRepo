@@ -9,10 +9,17 @@
 
 <p style="text-align:right">
     <a class="btn btn-success" asp-action="Create">Create New</a>
+    <a class="btn btn-secondary" style="float:left" href="../Home/MenuListar"> << Back</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdParametro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdParametroNavigation.DescripcionParametro)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.ValorNumDetParametro)
             </th>
@@ -25,15 +32,18 @@
             <th>
                 @Html.DisplayNameFor(model => model.EstadoDetParametro)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdParametroNavigation)
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdParametroNavigation.IdParametro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdParametroNavigation.DescripcionParametro)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ValorNumDetParametro)
             </td>
@@ -45,9 +55,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoDetParametro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdParametroNavigation.IdParametro)
             </td>
             <td>
 

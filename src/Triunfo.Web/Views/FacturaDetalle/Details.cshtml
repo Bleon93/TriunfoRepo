@@ -11,36 +11,38 @@
     <h4>FacturaDetalle</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CantidadProducto)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdFactura)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CantidadProducto)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ValorUnitario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ValorUnitario)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DescuentoNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DescuentoNavigation.IdDetParametro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdFacturaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IdFacturaNavigation.IdFactura)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdProductoNavigation)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProducto)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.IdProductoNavigation.IdProducto)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CantidadProducto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CantidadProducto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Descuento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Descuento)
+        </dd>
+
+        
     </dl>
 </div>
 <div>

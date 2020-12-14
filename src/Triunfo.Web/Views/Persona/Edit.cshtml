@@ -15,6 +15,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdPersona" />
             <div class="form-group">
+                <label asp-for="TipoDocPersona" class="control-label"></label>
+                <select asp-for="TipoDocPersona" class="form-control" asp-items="ViewBag.TipoDocPersona"></select>
+                <span asp-validation-for="TipoDocPersona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumDocPersona" class="control-label"></label>
+                <input asp-for="NumDocPersona" class="form-control" />
+                <span asp-validation-for="NumDocPersona" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="NombrePersona" class="control-label"></label>
                 <input asp-for="NombrePersona" class="form-control" />
                 <span asp-validation-for="NombrePersona" class="text-danger"></span>
@@ -33,16 +43,6 @@
                 <label asp-for="CorreoPersona" class="control-label"></label>
                 <input asp-for="CorreoPersona" class="form-control" />
                 <span asp-validation-for="CorreoPersona" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TipoDocPersona" class="control-label"></label>
-                <select asp-for="TipoDocPersona" class="form-control" asp-items="ViewBag.TipoDocPersona"></select>
-                <span asp-validation-for="TipoDocPersona" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NumDocPersona" class="control-label"></label>
-                <input asp-for="NumDocPersona" class="form-control" />
-                <span asp-validation-for="NumDocPersona" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RazonSocial" class="control-label"></label>

@@ -9,18 +9,25 @@
 
 <p style="text-align:right">
     <a class="btn btn-success" asp-action="Create">Create New</a>
+    <a class="btn btn-secondary" style="float:left" href="../Home/MenuListar"> << Back</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation.NombrePersona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation.ApellidoPersona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdVendedor)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.FechaFactura)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdClienteNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdVendedorNavigation)
             </th>
             <th></th>
         </tr>
@@ -29,13 +36,19 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FechaFactura)
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.IdPersona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.NombrePersona)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdClienteNavigation.ApellidoPersona)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdVendedorNavigation.ApellidoPersona)
+                @Html.DisplayFor(modelItem => item.IdVendedorNavigation.IdPersona)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFactura)
             </td>
             <td>
                 <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IdFactura">Details</a> |

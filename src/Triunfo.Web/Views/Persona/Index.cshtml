@@ -9,10 +9,17 @@
 
 <p style="text-align:right">
     <a class="btn btn-success" asp-action="Create">Create New</a>
+    <a class="btn btn-secondary" style="float:left" href="../Home/MenuListar"> << Back</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoDocPersona)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumDocPersona)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.NombrePersona)
             </th>
@@ -26,20 +33,21 @@
                 @Html.DisplayNameFor(model => model.CorreoPersona)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumDocPersona)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.RazonSocial)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoDocPersonaNavigation)
-            </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDocPersonaNavigation.ValorStringDetParametro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumDocPersona)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NombrePersona)
             </td>
@@ -53,14 +61,9 @@
                 @Html.DisplayFor(modelItem => item.CorreoPersona)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NumDocPersona)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.RazonSocial)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoDocPersonaNavigation.IdDetParametro)
-            </td>
+
             <td>
                 <a class="btn btn-info" asp-action="Details" asp-route-id="@item.IdPersona">Details</a> |
                 <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.IdPersona">Edit</a> |

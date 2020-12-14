@@ -45,8 +45,8 @@
             <div class="ingreso col-xs-12 col-sm-4 col-md-6 col-lg-3">
                 <h1>Ingreso</h1>
                 <ul>
-                    <li><a href="Ingresar.html">Ingresar</a></li>
-                    <li><a href="Registrarse.html">Registrarse</a></li>
+                    <li><a asp-action="Ingresar">Ingresar</a></li>
+                    <li><a asp-action="Registrarse">Registrarse</a></li>
                 </ul>
                 <h1>Productos en Descuento</h1>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -76,30 +76,14 @@
                 </div>
             </div>
             <div class="cuadro col-lg-9 col-md-12 d-none d-sm-block">
-                <div class="div_contac">
+                
                     <h1>Datos Empresa</h1>
                     <iframe class="localizacion"
                             src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1148.700108685361!2d-74.16481482269657!3d4.599801450180705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e3!4m3!3m2!1d4.6006154!2d-74.1645328!4m0!5e0!3m2!1ses-419!2sco!4v1573680617520!5m2!1ses-419!2sco"
                             frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     <h6>Dirección Carrera 72 Bis #56-20</h6>
                     Telefono: (+57) 3106274767<br>Bogotá D.C.
-                </div>
-                <div class="div_contac">
-                    <h1>Sugerencias</h1>
-                    <form action="">
-                        <h4>Redacte su Mensaje</h4>
-                        <p>Nombres *<input type="text" id="Nombres" name="" style=" width: 60%;float:right;"></p>
-                        <p>Apellidos *<input type="text" id="Apellidos" name="" style=" width: 60%;float:right;"></p>
-                        <p>Teléfono<input type="number" id="Teléfono" name="" style=" width: 60%;float:right;"></p>
-                        <p>Correo *<input type="email" id="Correo" name="Correo" style=" width: 60%;float:right;"></p>
-                        <p>Mensaje *<input type="textarea" id="Mensaje" name="" style=" width: 60%;float:right;"></p>
-                        <p>
-                            <input type="button" value="Aceptar" onclick="ValidarMensaje()" style="font-size: 1.5em;float:right;margin-bottom: 20px;">
-                        </p>
-
-                    </form>
-
-                </div>
+                
             </div>
         </section>
     </div>

@@ -43,6 +43,26 @@ namespace Triunfo.Web.Controllers
             return View();
         }
 
+        public IActionResult Registrarse()
+        {
+            return View();
+        }
+
+        public IActionResult Ingresar()
+        {
+            return View();
+        }
+
+        public IActionResult OlvidoContraseña()
+        {
+            return View();
+        }
+
+        public IActionResult MenuListar()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
